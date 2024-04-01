@@ -1,7 +1,0 @@
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.csproj.AssemblyReference.cache
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.AssemblyInfoInputs.cache
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.AssemblyInfo.cs
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.csproj.CoreCompileInputs.cache
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Alex\source\repos\GymFit\GymFit\obj\Debug\net7.0\GymFit.MvcApplicationPartsAssemblyInfo.cache
