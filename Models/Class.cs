@@ -2,18 +2,16 @@ namespace GymFit.Models
 {
     public class Class
     {
-        public string Name { get; set; }
+        private int id {  get; set; }
 
-        public DateOnly Date { get; set; }
+        private string Name { get; set; }
 
-        public int Duration { get; set; }
+        private int Duration { get; set; }
 
-        public Trainer Trainer { get; set; }
+        private Trainer Trainer { get; set; }
 
-        public string? Description { get; set; }
+        private string? Description { get; set; }
 
-        public int ClientNo { get; set; }
-
-        public int MaxNo { get; set; }
+        private int Capacity { get; set; }
     }
 }

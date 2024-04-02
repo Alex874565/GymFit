@@ -1,15 +1,15 @@
 namespace GymFit.Models
 {
-    public class Trainer
+    public class Trainer : User
     {
-        public string Name { get; set; }
+        private string Name { get; set; }
 
-        public int Age { get; set; }
+        private int Age { get; set; }
 
-        public int Experience { get; set; }
+        private int Experience { get; set; }
 
-        public string? Photo { get; set; }
+        private string? Photo { get; set; }
 
-        public string? Description { get; set; }
+        private string? Description { get; set; }
     }
 }

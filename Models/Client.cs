@@ -1,11 +1,9 @@
 ﻿namespace GymFit.Models
 {
-    public class Client
+    public class Client : User
     {
-        public int Id { get; set; }
+        private string Name { get; set; }
 
-        public string Name { get; set; }
-
-        public Subscription? Subscription { get; set; }
+        private Subscription? Subscription { get; set; }
     }
 }
