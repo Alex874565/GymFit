@@ -23,7 +23,7 @@ namespace GymFit.Controllers
         [HttpPost]
         public IResult Login([FromBody] Models.User user)
         {
-            if (user.getEmail() == "test" && user.getPassword() == "test")
+            //if (user.getEmail() == "test" && user.getPassword() == "test")
             {
                 var issuer = _config["Jwt:Issuer"];
                 var audience = _config["Jwt:Audience"];
@@ -34,8 +34,8 @@ namespace GymFit.Controllers
                     Subject = new ClaimsIdentity(new[]
                     {
                         new Claim("Id", Guid.NewGuid().ToString()),
-                        new Claim(JwtRegisteredClaimNames.Email, user.getEmail()),
-                        new Claim("Password", user.getPassword()),
+                        new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                        new Claim("Password", user.Password),
                         new Claim(JwtRegisteredClaimNames.Jti,
                         Guid.NewGuid().ToString())
                     }),

@@ -1,15 +1,32 @@
+using GymFit.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OData.Edm;
 using Microsoft.OpenApi.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.OData;
+using Microsoft.OData.ModelBuilder;
+
+static IEdmModel GetEdmModel()
+{
+    ODataConventionModelBuilder builder = new();
+    builder.EntitySet<Course>("Courses");
+    builder.EntitySet<Trainer>("Trainers");
+    return builder.GetEdmModel();
+}
+
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddControllers().AddOData(
+    options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(null).AddRouteComponents(
+        routePrefix: "odata",
+        model: GetEdmModel()));
+
 
 builder.Services.AddSwaggerGen(option =>
 {
