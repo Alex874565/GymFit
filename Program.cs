@@ -15,6 +15,9 @@ static IEdmModel GetEdmModel()
     ODataConventionModelBuilder builder = new();
     builder.EntitySet<Course>("Courses");
     builder.EntitySet<Trainer>("Trainers");
+    builder.EntitySet<CourseSchedule>("CourseSchedules");
+    builder.EntitySet<Subscription>("Subscriptions");
+    builder.EntitySet<Client>("Clients");
     return builder.GetEdmModel();
 }
 
